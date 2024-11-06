@@ -1,0 +1,3 @@
+django
+django-admin
+django-rest-framework
