@@ -1,0 +1,13 @@
+steps:
+  # build the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - build
+      - -t
+      - asia-southeast2-docker.pkg.dev/ojk-asc/test/test-app:$_IMAGE_TAG
+      - .
+    # push container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      - push
+      - asia-southeast2-docker.pkg.dev/ojk-asc/test/test-app:$_IMAGE_TAG
